@@ -61,7 +61,7 @@ def DoHook():
     if nibl_hook is None:
         nibl_hook = hexchat.hook_print("Channel Message", Redirect)
         hexchat.command("MENU -t1 ADD \"NIBL/XDCC Filter\" \"nxf on\" \"nxf off\"")
-    print "NIBL XDCC Filter activated"
+    print ("NIBL XDCC Filter activated")
     return hexchat.EAT_ALL
 
 def DelHook():
@@ -72,7 +72,7 @@ def DelHook():
         hexchat.unhook(nibl_hook)
         nibl_hook = None
         hexchat.command("MENU -t0 ADD \"NIBL/XDCC Filter\" \"nxf on\" \"nxf off\"")
-    print "NIBL XDCC Filter deactivated"
+    print ("NIBL XDCC Filter deactivated")
     return hexchat.EAT_ALL
 
 def check_dirs(f):
